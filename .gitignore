@@ -4,6 +4,7 @@ dist/
 .astro/
 
 .vscode
+bun.lockb
 
 # dependencies
 node_modules/
