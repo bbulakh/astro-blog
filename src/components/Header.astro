@@ -2,10 +2,10 @@
 import { Icon } from "astro-icon";
 ---
 
-<header class="max-w-[1200px] mx-auto">
-  <div class="hidden lg:flex justify-between h-[36px] items-center my-4 px-3">
+<header class="max-w-[1200px] mx-auto dark:bg-[#003049]">
+  <div class="hidden lg:flex justify-between h-[36px] items-center mb-4 pt-4 px-3">
     <div class="text-sm">
-      <ul class="flex gap-5 text-[#595D69]">
+      <ul class="flex gap-5 text-[#595D69] dark:text-slate-100">
         <li>
           <a href="#">About</a>
         </li>
@@ -29,19 +29,19 @@ import { Icon } from "astro-icon";
         <a
           href="#"
           aria-current="page"
-          class="px-4 py-2 text-xs font-medium text-gray-900 bg-white border border-gray-200 rounded-l-lg hover:bg-gray-100 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:bg-gray-700 dark:border-gray-600 dark:text-white dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-blue-500 dark:focus:text-white"
+          class="px-4 py-2 text-xs font-medium text-gray-900 bg-white border border-gray-200 rounded-l-lg hover:bg-gray-100 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:bg-[#003049] dark:border-gray-600 dark:text-white dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-blue-500 dark:focus:text-white"
         >
           A&minus;
         </a>
-        <a
+        <aﬁ
           href="#"
-          class="px-4 py-2 text-xs font-medium text-blue-700 bg-white border-t border-b border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:bg-gray-700 dark:border-gray-600 dark:text-white dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-blue-500 dark:focus:text-white"
+          class="px-4 py-2 text-xs font-medium text-blue-700 bg-white border-t border-b border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:bg-[#003049] dark:border-gray-600 dark:text-white dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-blue-500 dark:focus:text-white"
         >
           A
-        </a>
+        </aﬁ>
         <a
           href="#"
-          class="px-4 py-2 text-xs font-medium text-gray-900 bg-white border border-gray-200 rounded-r-md hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:bg-gray-700 dark:border-gray-600 dark:text-white dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-blue-500 dark:focus:text-white"
+          class="px-4 py-2 text-xs font-medium text-gray-900 bg-white border border-gray-200 rounded-r-md hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:bg-[#003049] dark:border-gray-600 dark:text-white dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-blue-500 dark:focus:text-white"
         >
           A&plus;
         </a>
@@ -49,27 +49,27 @@ import { Icon } from "astro-icon";
 
       <div class="flex mx-3 items-center">
         <button class="w-[32px] h-[32px] rounded-full bg-blue-500"
-          ><Icon class="w-[16px] text-white mx-auto" name="bi:circle-half" /></button
+          ><Icon class="w-[16px] text-white  mx-auto" name="bi:circle-half" /></button
         >
       </div>
 
       <div class="flex gap-5">
-        <Icon class="w-[16px] mx-auto" name="bi:facebook" />
-        <Icon class="w-[16px] mx-auto" name="bi:instagram" />
-        <Icon class="w-[16px] mx-auto" name="bi:google" />
-        <Icon class="w-[16px] mx-auto" name="bi:github" />
-        <Icon class="w-[16px] mx-auto" name="bi:linkedin" />
+        <Icon class="w-[16px] mx-auto dark:text-slate-100" name="bi:facebook" />
+        <Icon class="w-[16px] mx-auto dark:text-slate-100" name="bi:instagram" />
+        <Icon class="w-[16px] mx-auto dark:text-slate-100" name="bi:google" />
+        <Icon class="w-[16px] mx-auto dark:text-slate-100" name="bi:github" />
+        <Icon class="w-[16px] mx-auto dark:text-slate-100" name="bi:linkedin" />
       </div>
     </div>
   </div>
 
   <nav
-    class="flex justify-between h-[70px] lg:h-[90px] items-center border-t p-3"
+    class="flex justify-between h-[70px] lg:h-[90px] items-center border-t dark:border-slate-600 p-3"
   >
     <div>
       <a href="index.html"
         ><img
-          class="w-24"
+          class="w-24 dark:invert"
           src="public/images/blogic-logo-black.svg"
           alt="Blogic logo"
         /></a
@@ -77,7 +77,7 @@ import { Icon } from "astro-icon";
     </div>
 
     <div>
-      <ul class="hidden lg:flex items-center gap-10 h-[40px]">
+      <ul class="hidden lg:flex items-center dark:text-slate-100 gap-10 h-[40px]">
         <li>
           <a href="#">Home <span></span></a>
         </li>
@@ -101,13 +101,13 @@ import { Icon } from "astro-icon";
     </div>
 
     <div class="flex items-center gap-2 md:gap-5">
-      <a><Icon class="w-[40px]" name="bi:list" /></a>
-      <a
-        class="hidden px-4 md:flex items-center text-white bg-black rounded-md h-[40px]"
+      <a><Icon class="w-[40px] dark:text-slate-100" name="bi:list" /></a>
+      <a href="#"
+        class="hidden px-4 md:flex items-center text-white bg-black dark:bg-[#08D9D6] dark:text-black rounded-md h-[40px]"
         >Subscribe</a
       >
-      <a><Icon class="w-[30px]" name="bi:search" /></a>
-      <a><Icon class="w-[30px]" name="bi:person-circle" /></a>
+      <a><Icon class="w-[30px] dark:text-slate-100" name="bi:search" /></a>
+      <a><Icon class="w-[30px] dark:text-slate-100" name="bi:person-circle" /></a>
     </div>
   </nav>
 </header>
