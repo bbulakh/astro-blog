@@ -6,15 +6,21 @@ import { Icon } from "astro-icon";
 
 <footer class="mx-auto px-3 py-10 bg-black">
   <div class="max-w-[1200px] mx-auto">
-    <div>
-      <img class="w-40" src="public/images/blogic-logo.svg" alt="Blogic-logo" />
-      <p class="text-slate-100 py-3">
+    <div class="md:flex md:gap-5 md:border-b border-gray-600">
+      <div class="md:w-3/12">
+        <img
+          class="w-40 md:self-start"
+          src="public/images/blogic-logo.svg"
+          alt="Blogic-logo"
+        />
+      </div>
+      <p class="text-slate-100 py-3 md:px-5 md:w-6/12">
         Dive into a world of captivating blog posts from various topics
         including technology, lifestyle, travel, fashion, and more. Join us on
         Blogic and let your journey towards enlightenment begin.
       </p>
       <form
-        class="flex flex-col gap-2 pt-3 pb-10 border-b border-gray-600"
+        class="flex flex-col gap-2 pt-3 pb-10 border-b border-gray-600 md:border-none md:w-3/12"
         action=""
       >
         <input
@@ -22,8 +28,8 @@ import { Icon } from "astro-icon";
           type="text"
           placeholder="Enter your E-mail address"
         />
-        <button class="py-2 bg-[#08D9D6] rounded-md">Subscribe</button>
-        <p class="text-gray-400 text-center">
+        <button class="py-2 bg-[#08D9D6] rounded-md sm:w-52">Subscribe</button>
+        <p class="text-gray-400 text-center md:text-left">
           Buy subscribing you agree with our <a class="underline" href="#"
             >Privacy policy</a
           >
@@ -31,21 +37,69 @@ import { Icon } from "astro-icon";
       </form>
     </div>
 
-    <div class="py-10">
-      <h2 class="text-slate-100 text-xl mb-7">Recent posts</h2>
+    <div class="grid md:grid-cols-2 md:gap-4 lg:gap-6 lg:grid-cols-4">
+      <div class="pt-10">
+        <h2 class="text-slate-100 text-xl mb-7">Recent posts</h2>
+  
+        <FooterRecentPosts
+          title="Top 10 ideas to start up your own bussiness!"
+          tagName="Bussiness"
+          author="Bogdan Bulakh"
+          date="10 Apr 2023"
+        />
+        <FooterRecentPosts
+          title="Easy way to make your first $1M by producing educational courses"
+          tagName="Marketing"
+          author="Infor Geapsey"
+          date="10 Mar 2023"
+        />
+      </div>
+  
+      <div class="pb-10 md:py-10">
+        <h2 class="text-slate-100 text-xl mb-7">Navigation</h2>
+  
+        <div class="grid grid-cols-2 text-sm text-gray-400">
+          <a class="pb-3" href="#">Features</a>
+          <a class="pb-3" href="#">Style Guide</a>
+          <a class="pb-3" href="#">Contact Us</a>
+          <a class="pb-3" href="#">Carrer</a>
+          <a class="pb-3" href="#">News</a>
+          <a class="pb-3" href="#">Blog</a>
+          <a class="pb-3" href="#">Support</a>
+          <a class="pb-3" href="#">Privacy Policy</a>
+          <a class="pb-3" href="#">Newsletter</a>
+          <a class="pb-3" href="#">Authors</a>
+          <a class="pb-3" href="#">Documents</a>
+          <a class="pb-3" href="#">Hello</a>
+          <a class="pb-3" href="#">Hello</a>
+        </div>
+      </div>
+  
+      <div class="pb-10 md:py-10">
+        <h2 class="text-slate-100 text-xl mb-7">Get regular updates</h2>
+  
+        <div class="grid grid-cols-1 text-sm text-gray-400">
+          <a class="pb-3 flex items-center gap-2" href="#"><Icon class="w-4 h-4" name="bi:github" /> GitHub</a>
+          <a class="pb-3 flex items-center gap-2" href="#"><Icon class="w-4 h-4" name="bi:facebook" /> Facebook</a>
+          <a class="pb-3 flex items-center gap-2" href="#"><Icon class="w-4 h-4" name="bi:whatsapp" /> WhatsApp</a>
+          <a class="pb-3 flex items-center gap-2" href="#"><Icon class="w-4 h-4" name="bi:telegram" /> Telegram</a>
+          <a class="pb-3 flex items-center gap-2" href="#"><Icon class="w-4 h-4" name="bi:google" /> Google Mail</a>
+          
+        </div>
+      </div>
+  
+  
+      <div class="pb-10 md:py-10">
+        <h2 class="text-slate-100 text-xl mb-7">Download our app</h2>
 
-      <FooterRecentPosts
-        title="Top 10 ideas to start up your own bussiness!"
-        tagName="Bussiness"
-        author="Bogdan Bulakh"
-        date="10 Apr 2023"
-      />
-      <FooterRecentPosts
-        title="Easy way to make your first $1M by producing educational courses"
-        tagName="Marketing"
-        author="Infor Geapsey"
-        date="10 Mar 2023"
-      />
+        <p class="text-gray-400 text-sm mb-5">Download our App and get the latest Breaking News Alerts and latest headlines and daily articles near you.</p>
+  
+        <div class="flex gap-3 text-gray-400">
+          <a href="#"><img src="public/images/appstore-badge.svg" alt=""></a>
+          <a href="#"><img src="public/images/googleplay-badge.svg" alt=""></a>
+        
+        </div>
+      </div>
     </div>
   </div>
 
