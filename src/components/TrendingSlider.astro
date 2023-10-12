@@ -1,0 +1,33 @@
+---
+interface Props {
+  title: string;
+}
+
+import Icon from "astro-icon";
+
+const { title } = Astro.props;
+---
+
+<section class="max-w-[1200px] mx-auto px-3 my-5">
+  <div
+    class="w-full flex flex-col md:flex-row lg:justify-between items-center bg-blue-50 dark:bg-[#005C79]"
+  >
+    <div
+      class="flex justify-center md:mx-3 w-[90px] h-[30px] px-3 py-2 my-3 bg-blue-500 dark:bg-red-500 rounded-md"
+    >
+      <p class="text-white text-center text-xs">Trending&colon;</p>
+    </div>
+
+    <p class="text-sm text-center px-3 my-4 dark:text-slate-100">{title}</p>
+
+    <div class="hidden lg:flex gap-2 mx-3">
+      <button class="w-5 h-5 rounded-full bg-white dark:bg-[#003049]">
+        <Icon class="w-5 text-gray-500 dark:text-slate-100" name="bi:arrow-left-circle" />
+      </button>
+
+      <button class="w-5 h-5 rounded-full bg-white dark:bg-[#003049]">
+        <Icon class="w-5 text-gray-500 dark:text-slate-100" name="bi:arrow-right-circle" />
+      </button>
+    </div>
+  </div>
+</section>
