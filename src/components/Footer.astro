@@ -59,19 +59,19 @@ import { Icon } from "astro-icon";
         <h2 class="text-slate-100 text-xl mb-7">Navigation</h2>
   
         <div class="grid grid-cols-2 text-sm text-gray-400">
-          <a class="pb-3" href="#">Features</a>
-          <a class="pb-3" href="#">Style Guide</a>
-          <a class="pb-3" href="#">Contact Us</a>
-          <a class="pb-3" href="#">Carrer</a>
-          <a class="pb-3" href="#">News</a>
-          <a class="pb-3" href="#">Blog</a>
-          <a class="pb-3" href="#">Support</a>
-          <a class="pb-3" href="#">Privacy Policy</a>
-          <a class="pb-3" href="#">Newsletter</a>
-          <a class="pb-3" href="#">Authors</a>
-          <a class="pb-3" href="#">Documents</a>
-          <a class="pb-3" href="#">Hello</a>
-          <a class="pb-3" href="#">Hello</a>
+          <a class="pb-3 w-fit hover:text-red-500 duration-500" href="#">Features</a>
+          <a class="pb-3 w-fit hover:text-red-500 duration-500" href="#">Style Guide</a>
+          <a class="pb-3 w-fit hover:text-red-500 duration-500" href="#">Contact Us</a>
+          <a class="pb-3 w-fit hover:text-red-500 duration-500" href="#">Carrer</a>
+          <a class="pb-3 w-fit hover:text-red-500 duration-500" href="#">News</a>
+          <a class="pb-3 w-fit hover:text-red-500 duration-500" href="#">Blog</a>
+          <a class="pb-3 w-fit hover:text-red-500 duration-500" href="#">Support</a>
+          <a class="pb-3 w-fit hover:text-red-500 duration-500" href="#">Privacy Policy</a>
+          <a class="pb-3 w-fit hover:text-red-500 duration-500" href="#">Newsletter</a>
+          <a class="pb-3 w-fit hover:text-red-500 duration-500" href="#">Authors</a>
+          <a class="pb-3 w-fit hover:text-red-500 duration-500" href="#">Documents</a>
+          <a class="pb-3 w-fit hover:text-red-500 duration-500" href="#">Hello</a>
+          <a class="pb-3 w-fit hover:text-red-500 duration-500" href="#">Hello</a>
         </div>
       </div>
   
@@ -79,11 +79,11 @@ import { Icon } from "astro-icon";
         <h2 class="text-slate-100 text-xl mb-7">Get regular updates</h2>
   
         <div class="grid grid-cols-1 text-sm text-gray-400">
-          <a class="pb-3 flex items-center gap-2" href="#"><Icon class="w-4 h-4" name="bi:github" /> GitHub</a>
-          <a class="pb-3 flex items-center gap-2" href="#"><Icon class="w-4 h-4" name="bi:facebook" /> Facebook</a>
-          <a class="pb-3 flex items-center gap-2" href="#"><Icon class="w-4 h-4" name="bi:whatsapp" /> WhatsApp</a>
-          <a class="pb-3 flex items-center gap-2" href="#"><Icon class="w-4 h-4" name="bi:telegram" /> Telegram</a>
-          <a class="pb-3 flex items-center gap-2" href="#"><Icon class="w-4 h-4" name="bi:google" /> Google Mail</a>
+          <a class="pb-3 w-fit flex items-center gap-2 hover:text-red-500 duration-500" href="#"><Icon class="w-4 h-4" name="bi:github" /> GitHub</a>
+          <a class="pb-3 w-fit flex items-center gap-2 hover:text-red-500 duration-500" href="#"><Icon class="w-4 h-4" name="bi:facebook" /> Facebook</a>
+          <a class="pb-3 w-fit flex items-center gap-2 hover:text-red-500 duration-500" href="#"><Icon class="w-4 h-4" name="bi:whatsapp" /> WhatsApp</a>
+          <a class="pb-3 w-fit flex items-center gap-2 hover:text-red-500 duration-500" href="#"><Icon class="w-4 h-4" name="bi:telegram" /> Telegram</a>
+          <a class="pb-3 w-fit flex items-center gap-2 hover:text-red-500 duration-500" href="#"><Icon class="w-4 h-4" name="bi:google" /> Google Mail</a>
           
         </div>
       </div>
@@ -103,10 +103,11 @@ import { Icon } from "astro-icon";
     </div>
   </div>
 
-  <div>
-    <p class="dark:text-slate-100 text-center">
-      &copy; {today.getFullYear()} Bogdan Bulakh. <br />
-       All rights reserved.
-    </p>
-  </div>
+  
 </footer>
+<div class="w-full bg-gray-900">
+  <p class="py-5 px-3 text-center text-slate-300 lg:text-left">
+    &copy; {today.getFullYear()} Bogdan Bulakh. 
+     All rights reserved.
+  </p>
+</div>
