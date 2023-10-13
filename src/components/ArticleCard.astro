@@ -1,0 +1,49 @@
+---
+interface Props {
+  imgSrc: string;
+  tagName: string;
+  title: string;
+  subtitle: string;
+}
+
+import Icon from "astro-icon";
+
+const { imgSrc, tagName, title, subtitle } = Astro.props;
+---
+
+<div class="w-full">
+  <div class="relative w-full">
+    <img
+      class="rounded-lg w-full object-cover contrast-90 max-h-[400px] shadow-inner"
+      src={imgSrc}
+    />
+
+    <div class="px-3 absolute bottom-6 text-slate-100">
+      <div
+        class="px-3 text-xs h-[22px] flex items-center bg-red-500 w-fit mb-3 rounded-md"
+      >
+        <div class="flex items-center justify-center gap-3">
+          <Icon class="w-[10px] text-slate-100" name="bi:circle-fill" />
+          <p class="text-white">{tagName}</p>
+        </div>
+      </div>
+      <h2 class="text-xl font-medium mb-2">
+        {title}
+      </h2>
+      <p class="text-sm">
+        {subtitle}
+      </p>
+
+      <div class="md:flex md:items-center gap-3 hidden text-xs pt-4">
+        <div class="w-[40px] h-[40px]">
+          <img class="rounded-full" src="public/images/author-max.png" alt="" />
+        </div>
+        <p>By Max</p>
+        <span>&bull;</span>
+        <p>Apr 12, 2023</p>
+        <span>&bull;</span>
+        <p>5 min read</p>
+      </div>
+    </div>
+  </div>
+</div>
