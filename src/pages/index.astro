@@ -3,6 +3,7 @@ import BaseHead from "../components/BaseHead.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import TrendingSlider from "../components/TrendingSlider.astro";
+import ArticleCard from "../components/ArticleCard.astro";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
 ---
 
@@ -14,10 +15,47 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
   <body>
     <Header title={SITE_TITLE} />
 
-    <TrendingSlider title="Unlocking the Potential of Blockchain Technology in Transforming Supply Chain Management"/>
+    <TrendingSlider
+      title="Unlocking the Potential of Blockchain Technology in Transforming Supply Chain Management"
+    />
 
     <main class="max-w-[1200px] mx-auto">
-      
+      <section
+        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 lg:grid-rows-4 px-3 gap-4 mb-5 "
+      >
+        <div class="md:col-span-2 lg:col-span-1 lg:row-span-2">
+          <ArticleCard
+            imgSrc="public/images/night.jpg"
+            tagName="Bussiness"
+            title="Top 10 places to visit in Moscow for Startupers"
+            subtitle="Want to get in touch with top CEO's? It's perfect time to visit this places!"
+          />
+        </div>
+        <div class="md:col-span-1 lg:col-span-1">
+          <ArticleCard
+            imgSrc="public/images/sea.jpg"
+            tagName="Travel"
+            title="How to choose a right destination for your trip?"
+            subtitle=""
+          />
+        </div>
+        <div class="md:col-span-1 ">
+          <ArticleCard
+            imgSrc="public/images/lizard.jpg"
+            tagName="Nature"
+            title="Animals that were discovered in 2023"
+            subtitle=""
+          />
+        </div>
+        <div class="md:col-span-2 lg:col-span-1">
+          <ArticleCard
+            imgSrc="public/images/sport.jpg"
+            tagName="Sport"
+            title="How to be in fit if you don't like running"
+            subtitle=""
+          />
+        </div>
+      </section>
     </main>
     <Footer />
   </body>
