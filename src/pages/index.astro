@@ -5,6 +5,7 @@ import Footer from "../components/Footer.astro";
 import TrendingSlider from "../components/TrendingSlider.astro";
 import ArticleCard from "../components/ArticleCard.astro";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
+import SocialIcons from "../components/SocialIcons.astro";
 ---
 
 <!doctype html>
@@ -21,7 +22,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
 
     <main class="max-w-[1200px] mx-auto">
       <section
-        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 lg:grid-rows-2 px-3 gap-4 mb-5 "
+        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 lg:grid-rows-2 px-3 gap-4 mb-5"
       >
         <div class="md:col-span-2 lg:row-span-2">
           <ArticleCard
@@ -65,6 +66,13 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
           />
         </div>
       </section>
+
+      <section class="my-5">
+        <SocialIcons />
+      </section>
+
+
+
     </main>
     <Footer />
   </body>
