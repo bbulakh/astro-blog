@@ -12,12 +12,12 @@ const { imgSrc, title, date } = Astro.props;
   <a href="#" class="flex gap-4">
     <div class="w-4/12">
       <img
-        class="rounded-md object-cover"
+        class="rounded-md object-cover xs:max-h-[125px] xs:w-full"
         src={ imgSrc }
       />
     </div>
     <div class="flex w-8/12 flex-col justify-between">
-      <h2 class="dark:text-slate-100 text-sm font-medium">
+      <h2 class="dark:text-slate-100 text-sm xs:text-xl font-medium">
         { title }
       </h2>
       <p class="dark:text-gray-400 text-xs">{ date }</p>
