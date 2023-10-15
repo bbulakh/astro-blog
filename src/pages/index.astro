@@ -9,6 +9,7 @@ import SocialIcons from "../components/SocialIcons.astro";
 import Icon from "astro-icon";
 import TrendingTopics from "../components/TrendingTopics.astro";
 import TopHighlights from "../components/TopHighlights.astro";
+import RecentPosts from "../components/RecentPosts.astro";
 ---
 
 <!doctype html>
@@ -111,6 +112,21 @@ import TopHighlights from "../components/TopHighlights.astro";
         </h2>
         <TrendingTopics />
       </section>
+
+      <section class="my-5">
+        <h2 class="text-xl dark:text-slate-100 font-medium px-3 mb-3">
+          Recent Posts
+        </h2>
+        <div class="flex flex-col gap-4">
+          <RecentPosts imgSrc="../images/phone.jpg" title="The pros and cons of brand new iPhone 15 pro" date="Oct 23, 2023"/>
+          <RecentPosts imgSrc="../images/basketballs.jpg" title="Easy way to choose a proper basketball" date="Oct 15, 2023"/>
+          <RecentPosts imgSrc="../images/safe.jpg" title="Easy tip: Keep your passwords in a safe place" date="Oct 14, 2023"/>
+          <RecentPosts imgSrc="../images/spaceman.jpg" title="How to beacame a cool 3D-artist. My way in 5 steps" date="Mar 11, 2023"/>
+        </div>
+      </section>
+
+
+
     </main>
     <Footer />
   </body>
