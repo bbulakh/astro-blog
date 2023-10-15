@@ -1,0 +1,31 @@
+---
+interface Props {}
+import Icon from "astro-icon";
+---
+
+<div class="w-full my-5">
+  <div class="relative w-full">
+    <img
+      class="rounded-lg w-full object-cover contrast-90 max-h-[200px] brightness-75"
+      src="public/images/night.jpg"
+    />
+
+    <div class="px-3 absolute bottom-3 text-slate-100">
+      <div
+        class="px-3 text-xs h-[22px] flex items-center bg-red-500 w-fit mb-3 rounded-md"
+      >
+        <div class="flex items-center justify-center gap-3">
+          <Icon class="w-[10px] text-slate-100" name="bi:circle-fill" />
+          <p class="text-white">Bussiness</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div>
+    <p class="flex items-center gap-2 text-sm text-gray-400 py-2"><span><Icon class="w-3" name="bi:info-circle" /></span>Sponsored</p>
+    <h1 class=" text-xl font-medium">
+      21 reasons to find a job in tech industry
+    </h1>
+    <p class="text-sm leading-5 pt-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel labore suscipit perferendis. Voluptatibus cum libero dignissimos voluptate vitae veniam tempore nulla pariatur. Placeat totam dicta saepe esse quis porro deserunt.</p>
+  </div>
+</div>
