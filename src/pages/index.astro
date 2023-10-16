@@ -7,9 +7,11 @@ import ArticleCard from "../components/ArticleCard.astro";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
 import SocialIcons from "../components/SocialIcons.astro";
 import Icon from "astro-icon";
+import "@splidejs/splide/dist/css/themes/splide-default.min.css";
 import TrendingTopics from "../components/TrendingTopics.astro";
 import TopHighlights from "../components/TopHighlights.astro";
 import RecentPosts from "../components/RecentPosts.astro";
+import SponsoredNews from "../components/SponsoredNews.astro";
 ---
 
 <!doctype html>
@@ -65,7 +67,7 @@ import RecentPosts from "../components/RecentPosts.astro";
           <ArticleCard
             imgSrc="public/images/city.jpg"
             tagName="Sport"
-            title="How to be in fit if you don't like running"
+            title="Nightlife: top-10 crazy places to hang out"
             subtitle=""
           />
         </div>
@@ -81,13 +83,43 @@ import RecentPosts from "../components/RecentPosts.astro";
             Latest breaking news, pictures, videos and special reports
           </p>
 
-          <div class="grid md:grid-cols-2 md:gap-4">
-            <TopHighlights />
-            <TopHighlights />
-            <TopHighlights />
-            <TopHighlights />
-            <TopHighlights />
-            <TopHighlights />
+          <div class="grid md:grid-cols-2 md:gap-5">
+            <TopHighlights
+              imgSrc="public/images/building.jpg"
+              tagName="Travel"
+              title="Iconic cities to visit in western Europe"
+              intro="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugiat optio veritatis rerum facere voluptatem eos at adipisci vel enim dolor, provident nostrum mollitia est tenetur esse, fuga fugit aut illum."
+            />
+            <TopHighlights
+              imgSrc="public/images/art.jpg"
+              tagName="Art"
+              title="Can you name at least 3 artists? Test your knowladge!"
+              intro="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugiat optio veritatis rerum facere voluptatem eos at adipisci vel enim dolor, provident nostrum mollitia est tenetur esse, fuga fugit aut illum."
+            />
+            <TopHighlights
+              imgSrc="public/images/ai.jpg"
+              tagName="Tech"
+              title="Reasons why you should scare of AI (Or not)"
+              intro="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugiat optio veritatis rerum facere voluptatem eos at adipisci vel enim dolor, provident nostrum mollitia est tenetur esse, fuga fugit aut illum."
+            />
+            <TopHighlights
+              imgSrc="public/images/dj.jpg"
+              tagName="Music"
+              title="Are you a really good DJ? Free checklist for everyone!"
+              intro="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugiat optio veritatis rerum facere voluptatem eos at adipisci vel enim dolor, provident nostrum mollitia est tenetur esse, fuga fugit aut illum."
+            />
+            <TopHighlights
+              imgSrc="public/images/hall.jpg"
+              tagName="Travel"
+              title="Extraordinary buildings all around the world"
+              intro="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugiat optio veritatis rerum facere voluptatem eos at adipisci vel enim dolor, provident nostrum mollitia est tenetur esse, fuga fugit aut illum."
+            />
+            <TopHighlights
+              imgSrc="public/images/music.jpg"
+              tagName="Music"
+              title="How to choose your second guitar?"
+              intro="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugiat optio veritatis rerum facere voluptatem eos at adipisci vel enim dolor, provident nostrum mollitia est tenetur esse, fuga fugit aut illum."
+            />
           </div>
 
           <div class="bg-blue-50 dark:dark:bg-[#005C79] rounded-md">
@@ -118,16 +150,100 @@ import RecentPosts from "../components/RecentPosts.astro";
           Recent Posts
         </h2>
         <div class="flex flex-col gap-4">
-          <RecentPosts imgSrc="../images/phone.jpg" title="The pros and cons of brand new iPhone 15 pro" date="Oct 23, 2023"/>
-          <RecentPosts imgSrc="../images/basketballs.jpg" title="Easy way to choose a proper basketball" date="Oct 15, 2023"/>
-          <RecentPosts imgSrc="../images/safe.jpg" title="Easy tip: Keep your passwords in a safe place" date="Oct 14, 2023"/>
-          <RecentPosts imgSrc="../images/spaceman.jpg" title="How to beacame a cool 3D-artist. My way in 5 steps" date="Mar 11, 2023"/>
+          <RecentPosts
+            imgSrc="../images/phone.jpg"
+            title="The pros and cons of brand new iPhone 15 pro"
+            date="Oct 23, 2023"
+          />
+          <RecentPosts
+            imgSrc="../images/basketballs.jpg"
+            title="Easy way to choose a proper basketball"
+            date="Oct 15, 2023"
+          />
+          <RecentPosts
+            imgSrc="../images/safe.jpg"
+            title="Easy tip: Keep your passwords in a safe place"
+            date="Oct 14, 2023"
+          />
+          <RecentPosts
+            imgSrc="../images/spaceman.jpg"
+            title="How to beacame a cool 3D-artist. My way in 5 steps"
+            date="Mar 11, 2023"
+          />
         </div>
       </section>
 
+      <section class="my-5">
+        <div class="px-3 dark:text-slate-100">
+          <div class="flex gap-2">
+            <Icon class="w-[24px]" name="bi:megaphone" />
+            <h2 class="text-2xl font-medium">Sponsored News</h2>
+          </div>
+        </div>
 
-
+        <section class="splide">
+          <div class="splide__track">
+            <ul class="splide__list">
+              <li class="splide__slide">
+                <SponsoredNews
+                  imgSrc="public/images/sneaker.jpg"
+                  tagName="Fashion"
+                  title="Best sneakers for 23-24 season"
+                />
+              </li>
+              <li class="splide__slide">
+                <SponsoredNews
+                  imgSrc="public/images/concert.jpg"
+                  tagName="Music"
+                  title="10 Must-see DJ sets of all time"
+                />
+              </li>
+              <li class="splide__slide">
+                <SponsoredNews
+                  imgSrc="public/images/score.jpg"
+                  tagName="Music"
+                  title="How to learn reading notes easily?"
+                />
+              </li>
+              <li class="splide__slide">
+                <SponsoredNews
+                  imgSrc="public/images/museum.jpg"
+                  tagName="Art"
+                  title="Modern Art: Grand opening"
+                />
+              </li>
+              <li class="splide__slide">
+                <SponsoredNews
+                  imgSrc="public/images/car.jpg"
+                  tagName="Tech"
+                  title="How to keep your car in working condition in northern regions"
+                />
+              </li>
+              <li class="splide__slide">
+                <SponsoredNews
+                  imgSrc="public/images/3d-print.jpg"
+                  tagName="Tech"
+                  title="Crazy stuff you can make with your 3D-printer"
+                />
+              </li>
+            </ul>
+          </div>
+        </section>
+      </section>
     </main>
     <Footer />
+    <script>
+      import { Splide } from "@splidejs/splide";
+
+      new Splide(".splide", {
+        type: "loop",
+        perPage: 4,
+        breakpoints: {
+          1200: { perPage: 3, gap: "1rem" },
+          768: { perPage: 2, gap: "1rem" },
+          500: { perPage: 1, gap: "1rem" },
+        },
+      }).mount();
+    </script>
   </body>
 </html>
