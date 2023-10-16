@@ -3,14 +3,14 @@ interface Props {}
 import Icon from "astro-icon";
 ---
 
-<div class="w-full my-5 px-3">
+<div class="w-full my-5 pb-4 px-3">
   <div class="relative w-full">
     <img
       class="rounded-lg w-full object-cover contrast-90 max-h-[220px] brightness-75"
       src="public/images/night.jpg"
     />
 
-    <div class="px-3 absolute bottom-3 text-slate-100">
+    <div class="px-3 absolute bottom-3 dark:text-slate-100">
       <div
         class="px-3 text-xs h-[22px] flex items-center bg-red-500 w-fit mb-3 rounded-md"
       >
@@ -23,8 +23,17 @@ import Icon from "astro-icon";
   </div>
   <div>
  
-    <h1 class=" text-xl font-medium mt-3 text-slate-100">
+    <h1 class=" text-xl font-medium mt-3 dark:text-slate-100">
       21 reasons to find a job in tech industry
     </h1>
-  </div>
+
+    <div class="md:flex items-center gap-2 text-sm pt-4 hidden dark:text-slate-100">
+        <div class="w-[40px] h-[40px]">
+          <img class="rounded-full" src="public/images/author-max.png" alt="" />
+        </div>
+        <p>By Max</p>
+        <span>&bull;</span>
+        <p>Apr 12, 2023</p>
+      </div>
+  
 </div>
