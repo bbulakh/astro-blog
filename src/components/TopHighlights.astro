@@ -1,13 +1,20 @@
 ---
-interface Props {}
+interface Props {
+  imgSrc: string;
+  tagName: string;
+  title: string;
+  intro: string;
+}
+
 import Icon from "astro-icon";
+const { imgSrc, title, tagName, intro } = Astro.props;
 ---
 
 <div class="w-full my-5">
   <div class="relative w-full">
     <img
       class="rounded-lg w-full object-cover contrast-90 max-h-[220px] brightness-75"
-      src="public/images/night.jpg"
+      src={ imgSrc }
     />
 
     <div class="px-3 absolute bottom-3 text-slate-100">
@@ -16,7 +23,7 @@ import Icon from "astro-icon";
       >
         <div class="flex items-center justify-center gap-3">
           <Icon class="w-[10px] text-slate-100" name="bi:circle-fill" />
-          <p class="text-white">Bussiness</p>
+          <p class="text-white">{ tagName }</p>
         </div>
       </div>
     </div>
@@ -24,8 +31,8 @@ import Icon from "astro-icon";
   <div>
     <p class="flex items-center gap-2 text-sm text-gray-400 py-2"><span><Icon class="w-3" name="bi:info-circle" /></span>Sponsored</p>
     <h1 class=" text-xl font-medium">
-      21 reasons to find a job in tech industry
+      { title }
     </h1>
-    <p class="text-sm leading-5 pt-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel labore suscipit perferendis. Voluptatibus cum libero dignissimos voluptate vitae veniam tempore nulla pariatur. Placeat totam dicta saepe esse quis porro deserunt.</p>
+    <p class="text-sm leading-5 pt-2">{ intro }</p>
   </div>
 </div>
