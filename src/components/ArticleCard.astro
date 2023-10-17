@@ -11,7 +11,7 @@ import Icon from "astro-icon";
 const { imgSrc, tagName, title, subtitle } = Astro.props;
 ---
 
-<div class="w-full">
+<div class="w-full @container">
   <div class="relative w-full">
     <img
       class="rounded-lg w-full object-cover contrast-90 max-h-[400px] lg:max-h-none brightness-75"
@@ -34,9 +34,11 @@ const { imgSrc, tagName, title, subtitle } = Astro.props;
         {subtitle}
       </p>
 
-      <div class="md:flex md:items-center gap-3 hidden text-xs pt-4">
+      <div
+        class="@[300px]:flex @[300px]:items-center gap-3 text-xs md:text-sm pt-4 @[200px]:hidden"
+      >
         <div class="w-[40px] h-[40px]">
-          <img class="rounded-full" src="public/images/author-max.png" alt="" />
+          <img class="rounded-full" src="images/author-max.png" alt="" />
         </div>
         <p>By Max</p>
         <span>&bull;</span>
