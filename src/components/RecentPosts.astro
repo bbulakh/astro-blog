@@ -1,8 +1,8 @@
 ---
 interface Props {
-    imgSrc: string;
-    title: string;
-	date: string;
+  imgSrc: string;
+  title: string;
+  date: string;
 }
 
 const { imgSrc, title, date } = Astro.props;
@@ -13,14 +13,14 @@ const { imgSrc, title, date } = Astro.props;
     <div class="w-4/12">
       <img
         class="rounded-md object-cover xs:max-h-[125px] xs:w-full"
-        src={ imgSrc }
+        src={imgSrc}
       />
     </div>
     <div class="flex w-8/12 flex-col justify-between">
-      <h2 class="dark:text-slate-100 text-sm xs:text-xl font-medium">
-        { title }
+      <h2 class="dark:text-slate-100 text-sm xs:text-xl lg:text-sm font-medium">
+        {title}
       </h2>
-      <p class="dark:text-gray-400 text-xs">{ date }</p>
+      <p class="dark:text-gray-400 text-xs">{date}</p>
     </div>
   </a>
 </div>

@@ -15,7 +15,7 @@ import SponsoredNews from "../components/SponsoredNews.astro";
 ---
 
 <!doctype html>
-<html class="bg-white dark:bg-[#003049]" lang="en">
+<html class="dark:bg-[#003049]" lang="en">
   <head>
     <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
   </head>
@@ -73,103 +73,107 @@ import SponsoredNews from "../components/SponsoredNews.astro";
         </div>
       </section>
 
-      <section class="my-5">
-        <div class="px-3 dark:text-slate-100">
-          <div class="flex gap-2">
-            <Icon class="w-[24px]" name="bi:stopwatch" />
-            <h2 class="text-2xl font-medium">Todays top highlights</h2>
+      <section class="lg:flex">
+        <section class="my-5">
+          <div class="px-3 dark:text-slate-100">
+            <div class="flex gap-2">
+              <Icon class="w-[24px]" name="bi:stopwatch" />
+              <h2 class="text-2xl font-medium">Todays top highlights</h2>
+            </div>
+            <p class="text-sm dark:text-gray-400">
+              Latest breaking news, pictures, videos and special reports
+            </p>
+
+            <div class="grid md:grid-cols-2 md:gap-5 lg:w-full">
+              <TopHighlights
+                imgSrc="public/images/building.jpg"
+                tagName="Travel"
+                title="Iconic cities to visit in western Europe"
+                intro="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugiat optio veritatis rerum facere voluptatem eos at adipisci vel enim dolor, provident nostrum mollitia est tenetur esse, fuga fugit aut illum."
+              />
+              <TopHighlights
+                imgSrc="public/images/art.jpg"
+                tagName="Art"
+                title="Can you name at least 3 artists? Test your knowladge!"
+                intro="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugiat optio veritatis rerum facere voluptatem eos at adipisci vel enim dolor, provident nostrum mollitia est tenetur esse, fuga fugit aut illum."
+              />
+              <TopHighlights
+                imgSrc="public/images/ai.jpg"
+                tagName="Tech"
+                title="Reasons why you should scare of AI (Or not)"
+                intro="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugiat optio veritatis rerum facere voluptatem eos at adipisci vel enim dolor, provident nostrum mollitia est tenetur esse, fuga fugit aut illum."
+              />
+              <TopHighlights
+                imgSrc="public/images/dj.jpg"
+                tagName="Music"
+                title="Are you a really good DJ? Free checklist for everyone!"
+                intro="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugiat optio veritatis rerum facere voluptatem eos at adipisci vel enim dolor, provident nostrum mollitia est tenetur esse, fuga fugit aut illum."
+              />
+              <TopHighlights
+                imgSrc="public/images/hall.jpg"
+                tagName="Travel"
+                title="Extraordinary buildings all around the world"
+                intro="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugiat optio veritatis rerum facere voluptatem eos at adipisci vel enim dolor, provident nostrum mollitia est tenetur esse, fuga fugit aut illum."
+              />
+              <TopHighlights
+                imgSrc="public/images/music.jpg"
+                tagName="Music"
+                title="How to choose your second guitar?"
+                intro="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugiat optio veritatis rerum facere voluptatem eos at adipisci vel enim dolor, provident nostrum mollitia est tenetur esse, fuga fugit aut illum."
+              />
+            </div>
+
+            <div class="bg-blue-50 dark:dark:bg-[#005C79] rounded-md">
+              <a
+                class="flex justify-center items-center gap-2 text-blue-500 dark:text-slate-100 py-3"
+                href="#"
+                >Load more posts<span
+                  ><Icon class="w-[16px]" name="bi:arrow-down-circle" /></span
+                ></a
+              >
+            </div>
           </div>
-          <p class="text-sm dark:text-gray-400">
-            Latest breaking news, pictures, videos and special reports
-          </p>
+        </section>
 
-          <div class="grid md:grid-cols-2 md:gap-5">
-            <TopHighlights
-              imgSrc="public/images/building.jpg"
-              tagName="Travel"
-              title="Iconic cities to visit in western Europe"
-              intro="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugiat optio veritatis rerum facere voluptatem eos at adipisci vel enim dolor, provident nostrum mollitia est tenetur esse, fuga fugit aut illum."
-            />
-            <TopHighlights
-              imgSrc="public/images/art.jpg"
-              tagName="Art"
-              title="Can you name at least 3 artists? Test your knowladge!"
-              intro="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugiat optio veritatis rerum facere voluptatem eos at adipisci vel enim dolor, provident nostrum mollitia est tenetur esse, fuga fugit aut illum."
-            />
-            <TopHighlights
-              imgSrc="public/images/ai.jpg"
-              tagName="Tech"
-              title="Reasons why you should scare of AI (Or not)"
-              intro="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugiat optio veritatis rerum facere voluptatem eos at adipisci vel enim dolor, provident nostrum mollitia est tenetur esse, fuga fugit aut illum."
-            />
-            <TopHighlights
-              imgSrc="public/images/dj.jpg"
-              tagName="Music"
-              title="Are you a really good DJ? Free checklist for everyone!"
-              intro="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugiat optio veritatis rerum facere voluptatem eos at adipisci vel enim dolor, provident nostrum mollitia est tenetur esse, fuga fugit aut illum."
-            />
-            <TopHighlights
-              imgSrc="public/images/hall.jpg"
-              tagName="Travel"
-              title="Extraordinary buildings all around the world"
-              intro="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugiat optio veritatis rerum facere voluptatem eos at adipisci vel enim dolor, provident nostrum mollitia est tenetur esse, fuga fugit aut illum."
-            />
-            <TopHighlights
-              imgSrc="public/images/music.jpg"
-              tagName="Music"
-              title="How to choose your second guitar?"
-              intro="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugiat optio veritatis rerum facere voluptatem eos at adipisci vel enim dolor, provident nostrum mollitia est tenetur esse, fuga fugit aut illum."
-            />
-          </div>
+        <div class="lg:flex lg:flex-col lg:w-9/12">
+          <section class="my-5">
+            <SocialIcons />
+          </section>
 
-          <div class="bg-blue-50 dark:dark:bg-[#005C79] rounded-md">
-            <a
-              class="flex justify-center items-center gap-2 text-blue-500 dark:text-slate-100 py-3"
-              href="#"
-              >Load more posts<span
-                ><Icon class="w-[16px]" name="bi:arrow-down-circle" /></span
-              ></a
-            >
-          </div>
-        </div>
-      </section>
+          <section class="my-5">
+            <h2 class="text-xl dark:text-slate-100 font-medium px-3 mb-3">
+              Trending Topics
+            </h2>
+            <TrendingTopics />
+          </section>
 
-      <section class="my-5">
-        <SocialIcons />
-      </section>
-
-      <section class="my-5">
-        <h2 class="text-xl dark:text-slate-100 font-medium px-3 mb-3">
-          Trending Topics
-        </h2>
-        <TrendingTopics />
-      </section>
-
-      <section class="my-5">
-        <h2 class="text-xl dark:text-slate-100 font-medium px-3 mb-3">
-          Recent Posts
-        </h2>
-        <div class="flex flex-col gap-4">
-          <RecentPosts
-            imgSrc="../images/phone.jpg"
-            title="The pros and cons of brand new iPhone 15 pro"
-            date="Oct 23, 2023"
-          />
-          <RecentPosts
-            imgSrc="../images/basketballs.jpg"
-            title="Easy way to choose a proper basketball"
-            date="Oct 15, 2023"
-          />
-          <RecentPosts
-            imgSrc="../images/safe.jpg"
-            title="Easy tip: Keep your passwords in a safe place"
-            date="Oct 14, 2023"
-          />
-          <RecentPosts
-            imgSrc="../images/spaceman.jpg"
-            title="How to beacame a cool 3D-artist. My way in 5 steps"
-            date="Mar 11, 2023"
-          />
+          <section class="my-5">
+            <h2 class="text-xl dark:text-slate-100 font-medium px-3 mb-3">
+              Recent Posts
+            </h2>
+            <div class="flex flex-col gap-4">
+              <RecentPosts
+                imgSrc="../images/phone.jpg"
+                title="The pros and cons of brand new iPhone 15 pro"
+                date="Oct 23, 2023"
+              />
+              <RecentPosts
+                imgSrc="../images/basketballs.jpg"
+                title="Easy way to choose a proper basketball"
+                date="Oct 15, 2023"
+              />
+              <RecentPosts
+                imgSrc="../images/safe.jpg"
+                title="Easy tip: Keep your passwords in a safe place"
+                date="Oct 14, 2023"
+              />
+              <RecentPosts
+                imgSrc="../images/spaceman.jpg"
+                title="How to beacame a cool 3D-artist. My way in 5 steps"
+                date="Mar 11, 2023"
+              />
+            </div>
+          </section>
         </div>
       </section>
 

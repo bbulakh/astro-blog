@@ -3,7 +3,6 @@ interface Props {
   imgSrc: string;
   tagName: string;
   title: string;
-  
 }
 import Icon from "astro-icon";
 const { imgSrc, title, tagName } = Astro.props;
@@ -13,7 +12,7 @@ const { imgSrc, title, tagName } = Astro.props;
   <div class="relative w-full">
     <img
       class="rounded-lg w-full object-cover contrast-90 max-h-[220px] brightness-75"
-      src={ imgSrc }
+      src={imgSrc}
     />
 
     <div class="px-3 absolute bottom-3 dark:text-slate-100">
@@ -22,19 +21,17 @@ const { imgSrc, title, tagName } = Astro.props;
       >
         <div class="flex items-center justify-center gap-3">
           <Icon class="w-[10px] text-slate-100" name="bi:circle-fill" />
-          <p class="text-white">{ tagName }</p>
+          <p class="text-white">{tagName}</p>
         </div>
       </div>
     </div>
   </div>
-  <div>
+  <div class="flex flex-col justify-between">
     <h1 class="text-xl font-medium mt-3 dark:text-slate-100">
-      { title }
+      {title}
     </h1>
 
-    <div
-      class="md:flex items-center gap-2 text-sm pt-4 hidden dark:text-slate-100"
-    >
+    <div class="items-center gap-2 text-sm pt-4 hidden dark:text-slate-100">
       <div class="w-[40px] h-[40px]">
         <img class="rounded-full" src="public/images/author-max.png" alt="" />
       </div>
