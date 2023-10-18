@@ -50,7 +50,7 @@ import { Icon } from "astro-icon";
       </div>
 
       <div class="flex mx-3 items-center">
-        <button
+        <button @click="darkMode = !darkMode"
           class="w-[30px] h-[30px] rounded-full bg-blue-500 dark:bg-orange-500"
           ><Icon
             class="w-[16px] text-white mx-auto"

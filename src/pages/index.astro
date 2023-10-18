@@ -15,11 +15,17 @@ import SponsoredNews from "../components/SponsoredNews.astro";
 ---
 
 <!doctype html>
-<html class="dark:bg-[#003049]" lang="en">
+<html
+  x-data="{ darkMode: localStorage.getItem('dark') === 'true'} "
+  x-init="$watch('darkMode', val => localStorage.setItem('dark', val))"
+  x-bind:class="{ 'dark': darkMode }"
+  class="dark"
+  lang="en"
+>
   <head>
     <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
   </head>
-  <body>
+  <body class="bg-white dark:bg-[#003049]">
     <Header title={SITE_TITLE} />
 
     <TrendingSlider
@@ -255,5 +261,8 @@ import SponsoredNews from "../components/SponsoredNews.astro";
         },
       }).mount();
     </script>
+    <script
+      src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"
+      defer></script>
   </body>
 </html>
