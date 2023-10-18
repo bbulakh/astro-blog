@@ -11,7 +11,7 @@ const { imgSrc, title, tagName, intro } = Astro.props;
 ---
 
 <div class="w-full my-5">
-  <div class="relative w-full">
+  <div class="relative w-full @container">
     <img
       class="rounded-lg w-full object-cover contrast-90 max-h-[220px] brightness-75"
       src={ imgSrc }
@@ -35,4 +35,17 @@ const { imgSrc, title, tagName, intro } = Astro.props;
     </h1>
     <p class="text-sm leading-5 pt-2">{ intro }</p>
   </div>
+
+  <div
+  class="@[300px]:hidden lg:flex lg:items-center @[200px]:items-center gap-3 hidden text-xs md:text-sm pt-4 @[200px]:flex"
+>
+  <div class="w-[40px] h-[40px]">
+    <img class="rounded-full" src="images/author-max.png" alt="" />
+  </div>
+  <p>By Max</p>
+  <span>&bull;</span>
+  <p>Apr 12, 2023</p>
+  <span>&bull;</span>
+  <p>5 min read</p>
+</div>
 </div>
