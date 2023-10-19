@@ -201,37 +201,53 @@ import { Icon } from "astro-icon";
       class="overflow-y-auto p-5 h-full bg-white border-r border-gray-200 dark:bg-gray-800 dark:border-gray-700"
     >
       <div class="flex flex-col mb-10">
-        <div class="w-full h-[47px]">
+        
+        <div class="w-full flex justify-between items-center h-[47px] mb-5">
+
+          <div class="flex items-center">
+            <button
+              @click="darkMode = !darkMode"
+              class="w-[30px] h-[30px] rounded-full bg-blue-500 dark:bg-orange-500"
+              ><Icon
+                class="w-[16px] text-white mx-auto"
+                name="bi:circle-half"
+              /></button
+            >
+          </div>
+
+
           <Icon
-            class="w-[30px] float-right text-gray-500 dark:text-slate-100"
+            class="w-[30px] text-gray-500 dark:text-slate-100"
             name="bi:x"
           />
         </div>
         <img
-          class="w-[100px] mb-3"
+          class="w-[100px] mb-3 dark:invert"
           src="public/images/blogic-logo-black.svg"
           alt="Blogic Logo"
         />
-        <p class="text-gray-500 text-sm">
+        <p class="text-gray-500 dark:text-gray-400 text-sm">
           From the latest in technology and entertainment to health and wellness
           tips, Blogic offers timely and valuable insights that cater to diverse
           interests.
         </p>
       </div>
-      <ul class="space-y-2 mb-10">
+      <ul class="space-y-2 mb-10 dark:text-gray-400">
         <li><a class="text-xl font-medium" href="#">Home</a></li>
         <li><a class="text-xl font-medium" href="#">About</a></li>
         <li><a class="text-xl font-medium" href="#">Contact Us</a></li>
         <li><a class="text-xl font-medium" href="#">Post</a></li>
       </ul>
 
-      <div class="bg-blue-50 w-full mb-10">
+      
+
+      <div class="bg-blue-50 dark:bg-[#005c79] dark:text-slate-100 w-full mb-10">
         <div class="p-5 flex flex-col">
-          <p class="text-sm text-center mb-1 text-gray-500">Blogic</p>
+          <p class="text-sm text-center mb-1 text-gray-500 dark:text-gray-300">Blogic</p>
           <h3 class="text-center text-2xl font-medium mb-3">
             Upgrade to Premium plan!
           </h3>
-          <p class="text-sm text-center text-gray-500 mb-3">
+          <p class="text-sm text-center text-gray-500 dark:text-gray-300 mb-3">
             Get in touch to the cutting-edge news about tech, travel, arts etc.
           </p>
           <button class="px-3 py-2 bg-red-500 text-white font-medium rounded-md"
@@ -241,12 +257,45 @@ import { Icon } from "astro-icon";
       </div>
 
 
-      <div class="flex flex-col text-sm text-gray-500">
+      <div class="flex flex-col text-sm text-gray-500 dark:text-gray-300 mb-10">
         <p class="font-bold">Serbia, Belgrade</p>
         <p>Škocjan 64, Trebnje</p>
         <p class="mb-2">Call: 409-2494-42848-22</p>
         <p>hello@blogic.com</p>
 
+      </div>
+
+      <div class="flex gap-5 text-gray-500">
+        <a class="my-auto" href="#"
+          ><Icon
+            class="w-[16px] mx-auto dark:text-slate-100"
+            name="bi:facebook"
+          /></a
+        >
+        <a class="my-auto" href="#">
+          <Icon
+            class="w-[16px] mx-auto dark:text-slate-100"
+            name="bi:instagram"
+          />
+        </a>
+        <a class="my-auto" href="#"
+          ><Icon
+            class="w-[16px] mx-auto dark:text-slate-100"
+            name="bi:google"
+          /></a
+        >
+        <a class="my-auto" href="#"
+          ><Icon
+            class="w-[16px] mx-auto dark:text-slate-100"
+            name="bi:github"
+          /></a
+        >
+        <a class="my-auto" href="#"
+          ><Icon
+            class="w-[16px] mx-auto dark:text-slate-100"
+            name="bi:linkedin"
+          /></a
+        >
       </div>
 
 
