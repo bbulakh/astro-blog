@@ -196,14 +196,12 @@ import { Icon } from "astro-icon";
         >
 
         <aside
-        x-transition:enter="transition ease-out origin-right duration-300"
+          x-transition:enter="transition ease-out origin-right duration-300"
           x-transition:enter-start="opacity-0 transform scale-100"
           x-transition:enter-end="opacity-100 transform scale-100"
           x-transition:leave="transition origin-top ease-in duration-100"
           x-transition:leave-start="opacity-100 transform scale-100"
           x-transition:leave-end="opacity-0 transform scale-90"
-        
-        
           x-show="burgerMenuOpen"
           class="fixed top-0 right-0 w-[320px] h-full z-50"
         >
