@@ -2,12 +2,13 @@
 interface Props {
   imgSrc: string;
   tagName: string;
+  tagColor: string;
   title: string;
   intro: string;
 }
 
 import Icon from "astro-icon";
-const { imgSrc, title, tagName, intro } = Astro.props;
+const { imgSrc, title, tagName, intro, tagColor } = Astro.props;
 ---
 
 <div class="w-full my-5">
@@ -19,7 +20,7 @@ const { imgSrc, title, tagName, intro } = Astro.props;
 
     <div class="px-3 absolute bottom-3 text-slate-100">
       <div
-        class="px-3 text-xs h-[22px] flex items-center bg-red-500 w-fit mb-3 rounded-md"
+        class="px-3 text-xs h-[22px] flex items-center w-fit mb-3 rounded-md" style={tagColor}
       >
         <div class="flex items-center justify-center gap-3">
           <Icon class="w-[10px] text-slate-100" name="bi:circle-fill" />
