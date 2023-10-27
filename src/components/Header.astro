@@ -146,7 +146,10 @@ import { Icon } from "astro-icon";
       </ul>
     </div>
 
-    <div class="flex items-center gap-2 md:gap-5">
+    <div
+      x-data="{ SearchOpen: false, darkMode: false }"
+      class="flex items-center gap-2 md:gap-5"
+    >
       <a class="lg:hidden"
         ><Icon class="w-[40px] dark:text-slate-100" name="bi:list" /></a
       >
@@ -155,7 +158,7 @@ import { Icon } from "astro-icon";
         class="hidden px-4 md:flex items-center text-white bg-red-500 dark:bg-[#08D9D6] dark:text-black rounded-md h-[40px]"
         >Subscribe</a
       >
-      <div x-data="{ SearchOpen: false }">
+      <div>
         <button class="relative" x-on:click="SearchOpen = ! SearchOpen"
           ><Icon
             class="w-[30px] mt-1 dark:text-slate-100"
@@ -203,8 +206,7 @@ import { Icon } from "astro-icon";
           x-transition:leave-start="opacity-100 transform scale-100"
           x-transition:leave-end="opacity-0 transform scale-90"
           x-show="burgerMenuOpen"
-          class="fixed top-0 right-0 w-[320px] h-full z-50"
-        >
+          class="fixed top-0 right-0 w-[320px] h-full z-50">
           <div
             class="overflow-y-auto p-5 h-full bg-white border-r border-gray-200 dark:bg-gray-800 dark:border-gray-700"
           >
@@ -212,16 +214,14 @@ import { Icon } from "astro-icon";
               <div
                 class="w-full flex justify-between items-center h-[47px] mb-5"
               >
-                <div class="flex items-center lg:hidden">
-                  <button
-                    @click="darkMode = !darkMode"
-                    class="w-[30px] h-[30px] rounded-full bg-blue-500 dark:bg-orange-500"
-                    ><Icon
-                      class="w-[16px] text-white mx-auto"
-                      name="bi:circle-half"
-                    /></button
-                  >
-                </div>
+                <button
+                  @click="darkMode = !darkMode"
+                  class="w-[30px] h-[30px] rounded-full bg-blue-500 dark:bg-orange-500"
+                  ><Icon
+                    class="w-[16px] text-white mx-auto"
+                    name="bi:circle-half"
+                  /></button
+                >
 
                 <button x-on:click="burgerMenuOpen = ! burgerMenuOpen">
                   <Icon

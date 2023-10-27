@@ -1,0 +1,78 @@
+---
+import "../styles/global.css";
+import "../scripts/index.js";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import "@splidejs/splide/dist/css/themes/splide-default.min.css";
+
+interface Props {
+  title: string;
+  description: string;
+  image: string;
+}
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+const { title, description, image = "/blog-placeholder-1.jpg" } = Astro.props;
+---
+
+<!doctype html>
+<html
+  x-data="{ darkMode: localStorage.getItem('dark') === 'true'} "
+  x-init="$watch('darkMode', val => localStorage.setItem('dark', val))"
+  x-bind:class="{ 'dark': darkMode }"
+  class="dark"
+  class="bg-white dark:bg-[#003049]"
+  lang="en"
+>
+  <head>
+    <!-- Global Metadata -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href={canonicalURL} />
+
+    <!-- Primary Meta Tags -->
+    <title>{title}</title>
+    <meta name="title" content={title} />
+    <meta name="description" content={description} />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={Astro.url} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={new URL(image, Astro.url)} />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content={Astro.url} />
+    <meta property="twitter:title" content={title} />
+    <meta property="twitter:description" content={description} />
+    <meta property="twitter:image" content={new URL(image, Astro.url)} />
+  </head>
+
+  <body class="bg-white dark:bg-[#003049]">
+    <Header />
+    <slot />
+    <Footer />
+    <script>
+      import { Splide } from "@splidejs/splide";
+
+      new Splide(".splide", {
+        type: "loop",
+        perPage: 4,
+        breakpoints: {
+          1200: { perPage: 3, gap: "1rem" },
+          768: { perPage: 2, gap: "1rem" },
+          500: { perPage: 1, gap: "1rem" },
+        },
+      }).mount();
+    </script>
+    <script
+      src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"
+      defer></script>
+  </body>
+</html>
