@@ -58,21 +58,5 @@ const { title, description } = Astro.props;
     <Header />
     <slot />
     <Footer />
-    <script>
-      import { Splide } from "@splidejs/splide";
-
-      new Splide(".splide", {
-        type: "loop",
-        perPage: 4,
-        breakpoints: {
-          1200: { perPage: 3, gap: "1rem" },
-          768: { perPage: 2, gap: "1rem" },
-          500: { perPage: 1, gap: "1rem" },
-        },
-      }).mount();
-    </script>
-    <script
-      src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"
-      defer></script>
   </body>
 </html>
