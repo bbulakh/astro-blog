@@ -10,7 +10,7 @@ const { imgSrc, title, tagName, tagColor } = Astro.props;
 ---
 
 <div class="w-full my-5 pb-4 px-3">
-  <div class="relative w-full">
+  <a href="#" class="relative w-full">
     <img
       class="rounded-lg w-full object-cover contrast-90 max-h-[220px] brightness-75"
       src={imgSrc}
@@ -27,7 +27,7 @@ const { imgSrc, title, tagName, tagColor } = Astro.props;
         </div>
       </div>
     </div>
-  </div>
+  </a>
   <div class="flex flex-col justify-between">
     <h1 class="text-xl font-medium mt-3 dark:text-slate-100">
       {title}

@@ -14,7 +14,7 @@ const { imgSrc, tagName, title, subtitle, tagColor } = Astro.props;
 ---
 
 <div class="w-full @container">
-  <div class="relative w-full">
+  <a href="#" class="relative w-full">
     <img
       class="rounded-lg w-full object-cover contrast-90 max-h-[400px] lg:max-h-none brightness-75"
       src={imgSrc}
@@ -49,5 +49,5 @@ const { imgSrc, tagName, title, subtitle, tagColor } = Astro.props;
         <p>5 min read</p>
       </div>
     </div>
-  </div>
+  </a>
 </div>
