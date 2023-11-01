@@ -4,7 +4,7 @@ import { Icon } from "astro-icon";
 
 <header class="max-w-[1200px] mx-auto dark:bg-[#003049]">
   <nav
-    class="flex justify-between h-[70px] lg:h-[90px] items-center border-t dark:border-slate-600 p-3"
+    class="flex justify-between h-[70px] lg:h-[90px] items-center p-3"
   >
     <div>
       <a href="index.html"
@@ -43,12 +43,12 @@ import { Icon } from "astro-icon";
     </div>
 
     <div
-      x-data="{ SearchOpen: false, darkMode: false }"
+      x-data="{ SearchOpen: false }"
       class="flex items-center gap-2 md:gap-5"
     >
       <div class="flex mx-3 items-center">
         <button
-          @click="toggle"
+        @click="darkMode = !darkMode"
           class="w-[30px] h-[30px] rounded-full bg-blue-500 dark:bg-orange-500"
           ><Icon
             class="w-[16px] text-white mx-auto"
