@@ -55,9 +55,15 @@ const { title, description } = Astro.props;
   </head>
 
   
-    <CategoryHeader />
-    <slot />
-    <Footer />
-  
+    <body class="bg-white dark:bg-[#003049]">
+      <CategoryHeader />
+      <slot />
+      <Footer />
+
+
+      <script
+      src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"
+      defer></script>
+    </body>
 </html>
 

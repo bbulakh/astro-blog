@@ -1,43 +1,128 @@
 ---
-import Home from '../../layouts/Home.astro';
-import Header from '../../components/Header.astro';
-import Footer from '../../components/Footer.astro';
-import { SITE_TITLE, SITE_DESCRIPTION } from '../../consts';
-import { getCollection } from 'astro:content';
-import FormattedDate from '../../components/FormattedDate.astro';
+import SponsoredNews from "../../components/SponsoredNews.astro";
+import ArticleCard from "../../components/ArticleCard.astro";
+import RecentPosts from "../../components/RecentPosts.astro";
+import TopHighlights from "../../components/TopHighlights.astro";
+import TrendingTopics from "../../components/TrendingTopics.astro";
+import Icon from "astro-icon";
+import Category from "../../layouts/Category.astro";
+import { getCollection } from "astro:content";
 
-const posts = (await getCollection('blog')).sort(
-	(a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf()
+const posts = (await getCollection("blog")).sort(
+  (a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf()
 );
 ---
 
-<!doctype html>
-<html lang="en">
-	<head>
-		
-		
-	</head>
-	<body>
-		<Header />
-		<main>
-			
-		</main>
-		<Footer />
-		<script>
-			import { Splide } from "@splidejs/splide";
-	  
-			new Splide(".splide", {
-			  type: "loop",
-			  perPage: 4,
-			  breakpoints: {
-				1200: { perPage: 3, gap: "1rem" },
-				768: { perPage: 2, gap: "1rem" },
-				500: { perPage: 1, gap: "1rem" },
-			  },
-			}).mount();
-		  </script>
-		  <script
-			src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"
-			defer></script>
-	</body>
-</html>
+<Category title="Blog Tech" description="Tech news everyday">
+  <section class="mx-auto max-w-[1200px] my-5">
+    <div class="grid grid-cols-1 lg:grid-cols-4 place-content-center">
+      <div class="px-3 mb-5 lg:py-10 lg:col-span-2">
+        <ArticleCard
+          imgSrc="images/night.jpg"
+          tagName="Bussiness"
+          tagColor="background: #EB4041;"
+          title="Top 10 places to visit in Moscow for Startupers"
+          subtitle="Want to get in touch with top CEO's? It's perfect time to visit this places!"
+        />
+      </div>
+
+      <div
+        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-8 place-content-center lg:col-span-2 lg:py-10"
+      >
+        <RecentPosts
+          imgSrc="../images/spaceman.jpg"
+          title="How to beacame a cool 3D-artist. My way in 5 steps"
+          date="Mar 11, 2023"
+        />
+        <RecentPosts
+          imgSrc="../images/spaceman.jpg"
+          title="How to beacame a cool 3D-artist. My way in 5 steps"
+          date="Mar 11, 2023"
+        />
+
+        <RecentPosts
+          imgSrc="../images/spaceman.jpg"
+          title="How to beacame a cool 3D-artist. My way in 5 steps"
+          date="Mar 11, 2023"
+        />
+
+        <RecentPosts
+          imgSrc="../images/spaceman.jpg"
+          title="How to beacame a cool 3D-artist. My way in 5 steps"
+          date="Mar 11, 2023"
+        />
+
+        
+      </div>
+    </div>
+  </section>
+
+  <section class="my-5 max-w-[1200px] mx-auto">
+    <div class="px-3 dark:text-slate-100">
+      <div class="flex gap-2">
+        <Icon class="w-[24px]" name="bi:stopwatch" />
+        <h2 class="text-2xl font-medium">Todays top highlights</h2>
+      </div>
+      <p class="text-sm dark:text-gray-400">
+        Latest breaking news, pictures, videos and special reports
+      </p>
+
+      <div
+        class="grid md:grid-cols-2 lg:grid-cols-3 lg:gap-20 md:gap-5 lg:w-full"
+      >
+        <TopHighlights
+          imgSrc="images/building.jpg"
+          tagName="Travel"
+          tagColor="background: #62EB40;"
+          title="Iconic cities to visit in western Europe"
+          intro="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugiat optio veritatis rerum facere voluptatem eos at adipisci vel enim dolor, provident nostrum mollitia est tenetur esse, fuga fugit aut illum."
+        />
+        <TopHighlights
+          imgSrc="images/art.jpg"
+          tagName="Art"
+          tagColor="background: #EB9240;"
+          title="Can you name at least 3 artists? Test your knowladge!"
+          intro="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugiat optio veritatis rerum facere voluptatem eos at adipisci vel enim dolor, provident nostrum mollitia est tenetur esse, fuga fugit aut illum."
+        />
+        <TopHighlights
+          imgSrc="images/ai.jpg"
+          tagName="Tech"
+          tagColor="background: #B440EB;"
+          title="Reasons why you should scare of AI (Or not)"
+          intro="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugiat optio veritatis rerum facere voluptatem eos at adipisci vel enim dolor, provident nostrum mollitia est tenetur esse, fuga fugit aut illum."
+        />
+        <TopHighlights
+          imgSrc="images/dj.jpg"
+          tagName="Music"
+          tagColor="background: #4070EB;"
+          title="Are you a really good DJ? Free checklist for everyone!"
+          intro="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugiat optio veritatis rerum facere voluptatem eos at adipisci vel enim dolor, provident nostrum mollitia est tenetur esse, fuga fugit aut illum."
+        />
+        <TopHighlights
+          imgSrc="images/hall.jpg"
+          tagName="Travel"
+          tagColor="background: #62EB40;"
+          title="Extraordinary buildings all around the world"
+          intro="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugiat optio veritatis rerum facere voluptatem eos at adipisci vel enim dolor, provident nostrum mollitia est tenetur esse, fuga fugit aut illum."
+        />
+        <TopHighlights
+          imgSrc="images/music.jpg"
+          tagName="Music"
+          tagColor="background: #4070EB;"
+          title="How to choose your second guitar?"
+          intro="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugiat optio veritatis rerum facere voluptatem eos at adipisci vel enim dolor, provident nostrum mollitia est tenetur esse, fuga fugit aut illum."
+        />
+      </div>
+
+      <div class="bg-blue-50 dark:dark:bg-[#005C79] rounded-md">
+        <a
+          class="flex justify-center items-center gap-2 text-blue-500 dark:text-slate-100 py-3"
+          href="#"
+          >Load more posts<span
+            ><Icon class="w-[16px]" name="bi:arrow-down-circle" /></span
+          ></a
+        >
+      </div>
+    </div>
+  </section>
+</Category>
