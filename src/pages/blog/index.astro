@@ -1,9 +1,8 @@
 ---
-import SponsoredNews from "../../components/SponsoredNews.astro";
+import CategoryHero from "../../components/CategoryHero.astro";
+import TechPosts from "../../components/TechPosts.astro";
 import ArticleCard from "../../components/ArticleCard.astro";
-import RecentPosts from "../../components/RecentPosts.astro";
 import TopHighlights from "../../components/TopHighlights.astro";
-import TrendingTopics from "../../components/TrendingTopics.astro";
 import Icon from "astro-icon";
 import Category from "../../layouts/Category.astro";
 import { getCollection } from "astro:content";
@@ -14,55 +13,52 @@ const posts = (await getCollection("blog")).sort(
 ---
 
 <Category title="Blog Tech" description="Tech news everyday">
+  <CategoryHero />
   <section class="mx-auto max-w-[1200px] my-5">
-    <div class="grid grid-cols-1 lg:grid-cols-4 place-content-center">
-      <div class="px-3 mb-5 lg:py-10 lg:col-span-2">
+    <div class="flex flex-col lg:flex-row lg:w-full">
+      <div class="w-full px-3">
         <ArticleCard
-          imgSrc="images/night.jpg"
-          tagName="Bussiness"
-          tagColor="background: #EB4041;"
-          title="Top 10 places to visit in Moscow for Startupers"
-          subtitle="Want to get in touch with top CEO's? It's perfect time to visit this places!"
+          imgSrc="images/team.jpg"
+          tagName="Tech"
+          tagColor="background: #B440EB;"
+          title="Find Ideas for your startup"
+          subtitle="Best tips and tricks!"
         />
       </div>
 
       <div
-        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-8 place-content-center lg:col-span-2 lg:py-10"
+        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 my-5 lg:my-0 gap-8 w-full"
       >
-        <RecentPosts
-          imgSrc="../images/spaceman.jpg"
-          title="How to beacame a cool 3D-artist. My way in 5 steps"
-          date="Mar 11, 2023"
+        <TechPosts
+          imgSrc="../images/robot-hand.jpg"
+          title="New development of robot-hands"
+          date="May 1, 2023"
         />
-        <RecentPosts
-          imgSrc="../images/spaceman.jpg"
-          title="How to beacame a cool 3D-artist. My way in 5 steps"
+        <TechPosts
+          imgSrc="../images/neuron.jpg"
+          title="Neuralink is gonna be a breakthrough"
+          date="Oct 30, 2023"
+        />
+
+        <TechPosts
+          imgSrc="../images/macbook.jpg"
+          title="How to choose a MacBook for you"
           date="Mar 11, 2023"
         />
 
-        <RecentPosts
+        <TechPosts
           imgSrc="../images/spaceman.jpg"
-          title="How to beacame a cool 3D-artist. My way in 5 steps"
-          date="Mar 11, 2023"
+          title="World's famous astronauts"
+          date="Apr 12, 2023"
         />
-
-        <RecentPosts
-          imgSrc="../images/spaceman.jpg"
-          title="How to beacame a cool 3D-artist. My way in 5 steps"
-          date="Mar 11, 2023"
-        />
-
-        
       </div>
     </div>
   </section>
 
   <section class="my-5 max-w-[1200px] mx-auto">
     <div class="px-3 dark:text-slate-100">
-      <div class="flex gap-2">
-        <Icon class="w-[24px]" name="bi:stopwatch" />
-        <h2 class="text-2xl font-medium">Todays top highlights</h2>
-      </div>
+      <h2 class="text-2xl font-medium">Todays top highlights</h2>
+
       <p class="text-sm dark:text-gray-400">
         Latest breaking news, pictures, videos and special reports
       </p>
@@ -124,5 +120,14 @@ const posts = (await getCollection("blog")).sort(
         >
       </div>
     </div>
+  </section>
+
+  <section class="my-5 mx-auto bg-gray-200 dark:bg-[#005C79]">
+    <div class="px-3 dark:text-slate-100 text-center py-5">
+      <h2 class="text-2xl font-medium">Todays top highlights</h2>
+
+      <p class="text-sm dark:text-gray-400">
+        Latest breaking news, pictures, videos and special reports
+      </p>
   </section>
 </Category>
