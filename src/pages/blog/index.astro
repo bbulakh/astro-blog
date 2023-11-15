@@ -7,6 +7,7 @@ import TopHighlights from "../../components/TopHighlights.astro";
 import Icon from "astro-icon";
 import Category from "../../layouts/Category.astro";
 import { getCollection } from "astro:content";
+import WeeklyUpdates from "../../components/WeeklyUpdates.astro";
 
 const posts = (await getCollection("blog")).sort(
   (a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf()
@@ -14,7 +15,7 @@ const posts = (await getCollection("blog")).sort(
 ---
 
 <Category title="Blog Tech" description="Tech news everyday">
-  <Breadcrumbs pageName="Blog Tech"/>
+  <Breadcrumbs pageName="Blog Tech" />
   <CategoryHero />
 
   <section class="mx-auto max-w-[1200px] my-5">
@@ -125,12 +126,44 @@ const posts = (await getCollection("blog")).sort(
     </div>
   </section>
 
-  <section class="my-5 mx-auto bg-gray-200 dark:bg-[#005C79]">
+  <section class="mt-5 mx-auto bg-gray-100 dark:bg-[#005C79]">
     <div class="px-3 dark:text-slate-100 text-center py-5">
-      <h2 class="text-2xl font-medium">Todays top highlights</h2>
+      <h2 class="text-2xl font-medium">Weekly updates</h2>
 
       <p class="text-sm dark:text-gray-400">
         Latest breaking news, pictures, videos and special reports
       </p>
+    </div>
+
+    <div class="max-w-[1200px] mx-auto grid sm:grid-cols-2 md:grid-cols-4">
+      <WeeklyUpdates
+        imgSrc="/images/cosmos.jpg"
+        altTag="Astronaut"
+        tagColor="background-color:red"
+        tagName="Bussiness"
+        title="5 Ways to build your perfect bussiness"
+      />
+      <WeeklyUpdates
+        imgSrc="/images/team.jpg"
+        altTag="Team"
+        tagColor="background-color:red"
+        tagName="Bussiness"
+        title="Setting up a perfect team for you"
+      />
+      <WeeklyUpdates
+        imgSrc="/images/neuron.jpg"
+        altTag="Neuron"
+        tagColor="background-color:#B440EB"
+        tagName="Tech"
+        title="The latest researches in neural area"
+      />
+      <WeeklyUpdates
+        imgSrc="/images/rocket.jpg"
+        altTag="Sky Rocket"
+        tagColor="background-color:#B440EB"
+        tagName="Tech"
+        title="3 ways to build your own space rocket"
+      />
+    </div>
   </section>
 </Category>
